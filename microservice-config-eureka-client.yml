@@ -1,0 +1,39 @@
+spring:
+  profiles:
+    active:
+    - dev
+---
+spring:
+  application:
+    name: microservice-config-eureka-client
+  profiles:
+    active: dev
+server:
+  port: 6001
+
+eureka:
+  instance:
+    hostname=eureka-server:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+      register-with-eureka: false
+      prefer-ip-address: false
+---
+spring:
+  application:
+    name: microservice-config-eureka-client
+  profiles:
+    active: test
+server:
+  port: 6001
+
+eureka:
+  instance:
+    hostname=eureka-server:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+      register-with-eureka: false
+      prefer-ip-address: false
+
