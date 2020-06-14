@@ -1,4 +1,9 @@
 spring:
+  profiles:
+    active:
+      - dev
+---
+spring:
   application:
     name: microservice-config-client
   profiles:
@@ -8,7 +13,7 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8763/eureka
+      defaultZone: http://localhost:6002/eureka
       register-with-eureka: true
       prefer-ip-address: true
 ---
@@ -22,6 +27,6 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8763/eureka
+      defaultZone: http://localhost:6002/eureka
       register-with-eureka: true
       prefer-ip-address: true
