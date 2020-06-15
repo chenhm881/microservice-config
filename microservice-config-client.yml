@@ -1,31 +1,3 @@
 spring:
   profiles:
     active: dev
----
-spring:
-  application:
-    name: microservice-config-client
-  profiles:
-    active: dev
-server:
-  port: 8401
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:6002/eureka
-      register-with-eureka: true
-      prefer-ip-address: true
----
-spring:
-  application:
-    name: microservice-config-client
-  profiles:
-    active: test
-server:
-  port: 8501
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:6002/eureka
-      register-with-eureka: true
-      prefer-ip-address: true

@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: microservice-config-client
+  profiles:
+    active: test
+server:
+  port: 8501
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:6002/eureka
+      register-with-eureka: true
+      prefer-ip-address: true
