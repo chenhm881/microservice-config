@@ -1,0 +1,32 @@
+spring:
+  profiles:
+    active:
+      - dev
+---
+spring:
+  application:
+    name: microservice-config-hystrix-client
+  profiles:
+    active: dev
+server:
+  port: 9001
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:6002/eureka
+      register-with-eureka: true
+      prefer-ip-address: true
+---
+spring:
+  application:
+    name: microservice-config-hystrix-client
+  profiles:
+    active: test
+server:
+  port: 9002
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:6002/eureka
+      register-with-eureka: true
+      prefer-ip-address: true
